@@ -1,0 +1,26 @@
+//check each pixel in the circle to find the perimeter;
+      j = x - radius;
+      k = y - radius;
+      Point start(j,k);
+      Point end( x + radius, y + radius );
+      
+      int count = 0;
+      int c = 0;
+      printf( "r:%d, x:%d, y:%d\n", radius, j, k );
+      for(j = x - radius; j < x + radius; j++ )
+      {
+		    for(k = y - radius; k < y + radius; k++ )
+		    {
+		    	//if the pixel is white then it is a boundry, and
+		    	count++;
+		    	Scalar intensity = edges.at<uchar>(j,k);
+		    	if( intensity.val[0] != 0 )
+		    	{
+		    		std::cout<< intensity.val[0] <<std::endl;
+		    	}
+		    }
+		  }
+		  printf("Count: %d\n, non-black:%d", count, c );
+		  count = 0;
+		  c = 0;
+      printf( "r:%d, x:%d, y:%d\n", radius, j, k );		  

@@ -42,10 +42,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/qed/docs/sc/tests
+CMAKE_SOURCE_DIR = /home/qed/Documents/sc/tests
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/qed/docs/sc/tests
+CMAKE_BINARY_DIR = /home/qed/Documents/sc/tests
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -72,9 +72,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/qed/docs/sc/tests/CMakeFiles /home/qed/docs/sc/tests/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/qed/Documents/sc/tests/CMakeFiles /home/qed/Documents/sc/tests/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/qed/docs/sc/tests/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/qed/Documents/sc/tests/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -102,41 +102,65 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named cvMod
+# Target rules for targets named smooth
 
 # Build rule for target.
-cvMod: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 cvMod
-.PHONY : cvMod
+smooth: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 smooth
+.PHONY : smooth
 
 # fast build rule for target.
-cvMod/fast:
-	$(MAKE) -f CMakeFiles/cvMod.dir/build.make CMakeFiles/cvMod.dir/build
-.PHONY : cvMod/fast
+smooth/fast:
+	$(MAKE) -f CMakeFiles/smooth.dir/build.make CMakeFiles/smooth.dir/build
+.PHONY : smooth/fast
 
-cvMod.o: cvMod.cpp.o
-.PHONY : cvMod.o
+ecen.o: ecen.cpp.o
+.PHONY : ecen.o
 
 # target to build an object file
-cvMod.cpp.o:
-	$(MAKE) -f CMakeFiles/cvMod.dir/build.make CMakeFiles/cvMod.dir/cvMod.cpp.o
-.PHONY : cvMod.cpp.o
+ecen.cpp.o:
+	$(MAKE) -f CMakeFiles/smooth.dir/build.make CMakeFiles/smooth.dir/ecen.cpp.o
+.PHONY : ecen.cpp.o
 
-cvMod.i: cvMod.cpp.i
-.PHONY : cvMod.i
+ecen.i: ecen.cpp.i
+.PHONY : ecen.i
 
 # target to preprocess a source file
-cvMod.cpp.i:
-	$(MAKE) -f CMakeFiles/cvMod.dir/build.make CMakeFiles/cvMod.dir/cvMod.cpp.i
-.PHONY : cvMod.cpp.i
+ecen.cpp.i:
+	$(MAKE) -f CMakeFiles/smooth.dir/build.make CMakeFiles/smooth.dir/ecen.cpp.i
+.PHONY : ecen.cpp.i
 
-cvMod.s: cvMod.cpp.s
-.PHONY : cvMod.s
+ecen.s: ecen.cpp.s
+.PHONY : ecen.s
 
 # target to generate assembly for a file
-cvMod.cpp.s:
-	$(MAKE) -f CMakeFiles/cvMod.dir/build.make CMakeFiles/cvMod.dir/cvMod.cpp.s
-.PHONY : cvMod.cpp.s
+ecen.cpp.s:
+	$(MAKE) -f CMakeFiles/smooth.dir/build.make CMakeFiles/smooth.dir/ecen.cpp.s
+.PHONY : ecen.cpp.s
+
+smooth.o: smooth.cpp.o
+.PHONY : smooth.o
+
+# target to build an object file
+smooth.cpp.o:
+	$(MAKE) -f CMakeFiles/smooth.dir/build.make CMakeFiles/smooth.dir/smooth.cpp.o
+.PHONY : smooth.cpp.o
+
+smooth.i: smooth.cpp.i
+.PHONY : smooth.i
+
+# target to preprocess a source file
+smooth.cpp.i:
+	$(MAKE) -f CMakeFiles/smooth.dir/build.make CMakeFiles/smooth.dir/smooth.cpp.i
+.PHONY : smooth.cpp.i
+
+smooth.s: smooth.cpp.s
+.PHONY : smooth.s
+
+# target to generate assembly for a file
+smooth.cpp.s:
+	$(MAKE) -f CMakeFiles/smooth.dir/build.make CMakeFiles/smooth.dir/smooth.cpp.s
+.PHONY : smooth.cpp.s
 
 # Help Target
 help:
@@ -144,12 +168,15 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... cvMod"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... cvMod.o"
-	@echo "... cvMod.i"
-	@echo "... cvMod.s"
+	@echo "... smooth"
+	@echo "... ecen.o"
+	@echo "... ecen.i"
+	@echo "... ecen.s"
+	@echo "... smooth.o"
+	@echo "... smooth.i"
+	@echo "... smooth.s"
 .PHONY : help
 
 
