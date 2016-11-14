@@ -38,10 +38,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/qed/Documents/sc/tests
+CMAKE_SOURCE_DIR = /home/qed/docs/sc/tests
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/qed/Documents/sc/tests
+CMAKE_BINARY_DIR = /home/qed/docs/sc/tests
 
 # Include any dependencies generated for this target.
 include CMakeFiles/smooth.dir/depend.make
@@ -52,62 +52,37 @@ include CMakeFiles/smooth.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/smooth.dir/flags.make
 
-CMakeFiles/smooth.dir/smooth.cpp.o: CMakeFiles/smooth.dir/flags.make
-CMakeFiles/smooth.dir/smooth.cpp.o: smooth.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/qed/Documents/sc/tests/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/smooth.dir/smooth.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smooth.dir/smooth.cpp.o -c /home/qed/Documents/sc/tests/smooth.cpp
+CMakeFiles/smooth.dir/smooth.o: CMakeFiles/smooth.dir/flags.make
+CMakeFiles/smooth.dir/smooth.o: smooth.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/qed/docs/sc/tests/CMakeFiles $(CMAKE_PROGRESS_1)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/smooth.dir/smooth.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smooth.dir/smooth.o -c /home/qed/docs/sc/tests/smooth.cpp
 
-CMakeFiles/smooth.dir/smooth.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/smooth.dir/smooth.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/qed/Documents/sc/tests/smooth.cpp > CMakeFiles/smooth.dir/smooth.cpp.i
+CMakeFiles/smooth.dir/smooth.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/smooth.dir/smooth.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/qed/docs/sc/tests/smooth.cpp > CMakeFiles/smooth.dir/smooth.i
 
-CMakeFiles/smooth.dir/smooth.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/smooth.dir/smooth.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/qed/Documents/sc/tests/smooth.cpp -o CMakeFiles/smooth.dir/smooth.cpp.s
+CMakeFiles/smooth.dir/smooth.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/smooth.dir/smooth.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/qed/docs/sc/tests/smooth.cpp -o CMakeFiles/smooth.dir/smooth.s
 
-CMakeFiles/smooth.dir/smooth.cpp.o.requires:
-.PHONY : CMakeFiles/smooth.dir/smooth.cpp.o.requires
+CMakeFiles/smooth.dir/smooth.o.requires:
+.PHONY : CMakeFiles/smooth.dir/smooth.o.requires
 
-CMakeFiles/smooth.dir/smooth.cpp.o.provides: CMakeFiles/smooth.dir/smooth.cpp.o.requires
-	$(MAKE) -f CMakeFiles/smooth.dir/build.make CMakeFiles/smooth.dir/smooth.cpp.o.provides.build
-.PHONY : CMakeFiles/smooth.dir/smooth.cpp.o.provides
+CMakeFiles/smooth.dir/smooth.o.provides: CMakeFiles/smooth.dir/smooth.o.requires
+	$(MAKE) -f CMakeFiles/smooth.dir/build.make CMakeFiles/smooth.dir/smooth.o.provides.build
+.PHONY : CMakeFiles/smooth.dir/smooth.o.provides
 
-CMakeFiles/smooth.dir/smooth.cpp.o.provides.build: CMakeFiles/smooth.dir/smooth.cpp.o
-
-CMakeFiles/smooth.dir/ecen.cpp.o: CMakeFiles/smooth.dir/flags.make
-CMakeFiles/smooth.dir/ecen.cpp.o: ecen.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/qed/Documents/sc/tests/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/smooth.dir/ecen.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smooth.dir/ecen.cpp.o -c /home/qed/Documents/sc/tests/ecen.cpp
-
-CMakeFiles/smooth.dir/ecen.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/smooth.dir/ecen.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/qed/Documents/sc/tests/ecen.cpp > CMakeFiles/smooth.dir/ecen.cpp.i
-
-CMakeFiles/smooth.dir/ecen.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/smooth.dir/ecen.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/qed/Documents/sc/tests/ecen.cpp -o CMakeFiles/smooth.dir/ecen.cpp.s
-
-CMakeFiles/smooth.dir/ecen.cpp.o.requires:
-.PHONY : CMakeFiles/smooth.dir/ecen.cpp.o.requires
-
-CMakeFiles/smooth.dir/ecen.cpp.o.provides: CMakeFiles/smooth.dir/ecen.cpp.o.requires
-	$(MAKE) -f CMakeFiles/smooth.dir/build.make CMakeFiles/smooth.dir/ecen.cpp.o.provides.build
-.PHONY : CMakeFiles/smooth.dir/ecen.cpp.o.provides
-
-CMakeFiles/smooth.dir/ecen.cpp.o.provides.build: CMakeFiles/smooth.dir/ecen.cpp.o
+CMakeFiles/smooth.dir/smooth.o.provides.build: CMakeFiles/smooth.dir/smooth.o
 
 # Object files for target smooth
 smooth_OBJECTS = \
-"CMakeFiles/smooth.dir/smooth.cpp.o" \
-"CMakeFiles/smooth.dir/ecen.cpp.o"
+"CMakeFiles/smooth.dir/smooth.o"
 
 # External object files for target smooth
 smooth_EXTERNAL_OBJECTS =
 
-smooth: CMakeFiles/smooth.dir/smooth.cpp.o
-smooth: CMakeFiles/smooth.dir/ecen.cpp.o
+smooth: CMakeFiles/smooth.dir/smooth.o
 smooth: CMakeFiles/smooth.dir/build.make
 smooth: /usr/lib64/libopencv_calib3d.so
 smooth: /usr/lib64/libopencv_contrib.so
@@ -133,8 +108,7 @@ smooth: CMakeFiles/smooth.dir/link.txt
 CMakeFiles/smooth.dir/build: smooth
 .PHONY : CMakeFiles/smooth.dir/build
 
-CMakeFiles/smooth.dir/requires: CMakeFiles/smooth.dir/smooth.cpp.o.requires
-CMakeFiles/smooth.dir/requires: CMakeFiles/smooth.dir/ecen.cpp.o.requires
+CMakeFiles/smooth.dir/requires: CMakeFiles/smooth.dir/smooth.o.requires
 .PHONY : CMakeFiles/smooth.dir/requires
 
 CMakeFiles/smooth.dir/clean:
@@ -142,6 +116,6 @@ CMakeFiles/smooth.dir/clean:
 .PHONY : CMakeFiles/smooth.dir/clean
 
 CMakeFiles/smooth.dir/depend:
-	cd /home/qed/Documents/sc/tests && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/qed/Documents/sc/tests /home/qed/Documents/sc/tests /home/qed/Documents/sc/tests /home/qed/Documents/sc/tests /home/qed/Documents/sc/tests/CMakeFiles/smooth.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/qed/docs/sc/tests && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/qed/docs/sc/tests /home/qed/docs/sc/tests /home/qed/docs/sc/tests /home/qed/docs/sc/tests /home/qed/docs/sc/tests/CMakeFiles/smooth.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/smooth.dir/depend
 

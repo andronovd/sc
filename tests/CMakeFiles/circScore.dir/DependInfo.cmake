@@ -4,7 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/qed/docs/sc/tests/smooth.cpp" "/home/qed/docs/sc/tests/CMakeFiles/smooth.dir/smooth.o"
+  "/home/qed/docs/sc/tests/circScore.cpp" "/home/qed/docs/sc/tests/CMakeFiles/circScore.dir/circScore.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 

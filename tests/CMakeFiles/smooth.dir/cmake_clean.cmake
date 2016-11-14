@@ -1,6 +1,5 @@
 FILE(REMOVE_RECURSE
-  "CMakeFiles/smooth.dir/smooth.cpp.o"
-  "CMakeFiles/smooth.dir/ecen.cpp.o"
+  "CMakeFiles/smooth.dir/smooth.o"
   "smooth.pdb"
   "smooth"
 )

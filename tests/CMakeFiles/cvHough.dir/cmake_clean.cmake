@@ -1,5 +1,5 @@
 FILE(REMOVE_RECURSE
-  "CMakeFiles/cvHough.dir/cvHough.cpp.o"
+  "CMakeFiles/cvHough.dir/cvHough.o"
   "cvHough.pdb"
   "cvHough"
 )

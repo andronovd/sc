@@ -42,10 +42,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/qed/Documents/sc/tests
+CMAKE_SOURCE_DIR = /home/qed/docs/sc/tests
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/qed/Documents/sc/tests
+CMAKE_BINARY_DIR = /home/qed/docs/sc/tests
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -72,9 +72,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/qed/Documents/sc/tests/CMakeFiles /home/qed/Documents/sc/tests/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/qed/docs/sc/tests/CMakeFiles /home/qed/docs/sc/tests/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/qed/Documents/sc/tests/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/qed/docs/sc/tests/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -102,65 +102,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named smooth
+# Target rules for targets named circScoreVec
 
 # Build rule for target.
-smooth: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 smooth
-.PHONY : smooth
+circScoreVec: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 circScoreVec
+.PHONY : circScoreVec
 
 # fast build rule for target.
-smooth/fast:
-	$(MAKE) -f CMakeFiles/smooth.dir/build.make CMakeFiles/smooth.dir/build
-.PHONY : smooth/fast
-
-ecen.o: ecen.cpp.o
-.PHONY : ecen.o
+circScoreVec/fast:
+	$(MAKE) -f CMakeFiles/circScoreVec.dir/build.make CMakeFiles/circScoreVec.dir/build
+.PHONY : circScoreVec/fast
 
 # target to build an object file
-ecen.cpp.o:
-	$(MAKE) -f CMakeFiles/smooth.dir/build.make CMakeFiles/smooth.dir/ecen.cpp.o
-.PHONY : ecen.cpp.o
-
-ecen.i: ecen.cpp.i
-.PHONY : ecen.i
+circScoreVec.o:
+	$(MAKE) -f CMakeFiles/circScoreVec.dir/build.make CMakeFiles/circScoreVec.dir/circScoreVec.o
+.PHONY : circScoreVec.o
 
 # target to preprocess a source file
-ecen.cpp.i:
-	$(MAKE) -f CMakeFiles/smooth.dir/build.make CMakeFiles/smooth.dir/ecen.cpp.i
-.PHONY : ecen.cpp.i
-
-ecen.s: ecen.cpp.s
-.PHONY : ecen.s
+circScoreVec.i:
+	$(MAKE) -f CMakeFiles/circScoreVec.dir/build.make CMakeFiles/circScoreVec.dir/circScoreVec.i
+.PHONY : circScoreVec.i
 
 # target to generate assembly for a file
-ecen.cpp.s:
-	$(MAKE) -f CMakeFiles/smooth.dir/build.make CMakeFiles/smooth.dir/ecen.cpp.s
-.PHONY : ecen.cpp.s
-
-smooth.o: smooth.cpp.o
-.PHONY : smooth.o
-
-# target to build an object file
-smooth.cpp.o:
-	$(MAKE) -f CMakeFiles/smooth.dir/build.make CMakeFiles/smooth.dir/smooth.cpp.o
-.PHONY : smooth.cpp.o
-
-smooth.i: smooth.cpp.i
-.PHONY : smooth.i
-
-# target to preprocess a source file
-smooth.cpp.i:
-	$(MAKE) -f CMakeFiles/smooth.dir/build.make CMakeFiles/smooth.dir/smooth.cpp.i
-.PHONY : smooth.cpp.i
-
-smooth.s: smooth.cpp.s
-.PHONY : smooth.s
-
-# target to generate assembly for a file
-smooth.cpp.s:
-	$(MAKE) -f CMakeFiles/smooth.dir/build.make CMakeFiles/smooth.dir/smooth.cpp.s
-.PHONY : smooth.cpp.s
+circScoreVec.s:
+	$(MAKE) -f CMakeFiles/circScoreVec.dir/build.make CMakeFiles/circScoreVec.dir/circScoreVec.s
+.PHONY : circScoreVec.s
 
 # Help Target
 help:
@@ -168,15 +135,12 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... circScoreVec"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... smooth"
-	@echo "... ecen.o"
-	@echo "... ecen.i"
-	@echo "... ecen.s"
-	@echo "... smooth.o"
-	@echo "... smooth.i"
-	@echo "... smooth.s"
+	@echo "... circScoreVec.o"
+	@echo "... circScoreVec.i"
+	@echo "... circScoreVec.s"
 .PHONY : help
 
 

@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/qed/docs/sc/tests/smooth.cpp
+/home/qed/docs/sc/tests/circScoreVec.cpp
 opencv2/imgproc/imgproc.hpp
 -
 opencv2/highgui/highgui.hpp

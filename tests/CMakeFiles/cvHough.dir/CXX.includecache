@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/qed/Documents/sc/tests/cvHough.cpp
+/home/qed/docs/sc/tests/cvHough.cpp
 opencv2/highgui/highgui.hpp
-/home/qed/Documents/sc/tests/opencv2/highgui/highgui.hpp
+/home/qed/docs/sc/tests/opencv2/highgui/highgui.hpp
 opencv2/imgproc/imgproc.hpp
-/home/qed/Documents/sc/tests/opencv2/imgproc/imgproc.hpp
+/home/qed/docs/sc/tests/opencv2/imgproc/imgproc.hpp
 iostream
 -
 stdio.h

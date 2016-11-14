@@ -50,44 +50,44 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/qed/Documents/sc/tests
+CMAKE_SOURCE_DIR = /home/qed/docs/sc/tests
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/qed/Documents/sc/tests
+CMAKE_BINARY_DIR = /home/qed/docs/sc/tests
 
 #=============================================================================
-# Target rules for target CMakeFiles/smooth.dir
+# Target rules for target CMakeFiles/circScoreVec.dir
 
 # All Build rule for target.
-CMakeFiles/smooth.dir/all:
-	$(MAKE) -f CMakeFiles/smooth.dir/build.make CMakeFiles/smooth.dir/depend
-	$(MAKE) -f CMakeFiles/smooth.dir/build.make CMakeFiles/smooth.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/qed/Documents/sc/tests/CMakeFiles  1 2
-	@echo "Built target smooth"
-.PHONY : CMakeFiles/smooth.dir/all
+CMakeFiles/circScoreVec.dir/all:
+	$(MAKE) -f CMakeFiles/circScoreVec.dir/build.make CMakeFiles/circScoreVec.dir/depend
+	$(MAKE) -f CMakeFiles/circScoreVec.dir/build.make CMakeFiles/circScoreVec.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/qed/docs/sc/tests/CMakeFiles  1
+	@echo "Built target circScoreVec"
+.PHONY : CMakeFiles/circScoreVec.dir/all
 
 # Include target in all.
-all: CMakeFiles/smooth.dir/all
+all: CMakeFiles/circScoreVec.dir/all
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/smooth.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/qed/Documents/sc/tests/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/smooth.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/qed/Documents/sc/tests/CMakeFiles 0
-.PHONY : CMakeFiles/smooth.dir/rule
+CMakeFiles/circScoreVec.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/qed/docs/sc/tests/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/circScoreVec.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/qed/docs/sc/tests/CMakeFiles 0
+.PHONY : CMakeFiles/circScoreVec.dir/rule
 
 # Convenience name for target.
-smooth: CMakeFiles/smooth.dir/rule
-.PHONY : smooth
+circScoreVec: CMakeFiles/circScoreVec.dir/rule
+.PHONY : circScoreVec
 
 # clean rule for target.
-CMakeFiles/smooth.dir/clean:
-	$(MAKE) -f CMakeFiles/smooth.dir/build.make CMakeFiles/smooth.dir/clean
-.PHONY : CMakeFiles/smooth.dir/clean
+CMakeFiles/circScoreVec.dir/clean:
+	$(MAKE) -f CMakeFiles/circScoreVec.dir/build.make CMakeFiles/circScoreVec.dir/clean
+.PHONY : CMakeFiles/circScoreVec.dir/clean
 
 # clean rule for target.
-clean: CMakeFiles/smooth.dir/clean
+clean: CMakeFiles/circScoreVec.dir/clean
 .PHONY : clean
 
 #=============================================================================
