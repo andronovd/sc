@@ -1,1 +1,1 @@
-/home/qed/Documents/sc/brain/CMakeFiles/circScoreVec.dir
+/home/qed/docs/sc/brain/CMakeFiles/brain.dir

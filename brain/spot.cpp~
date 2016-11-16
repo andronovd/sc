@@ -6,7 +6,7 @@ spot::spot()
 
 spot::spot( Point p )
 {
-	this->center = p;
+	this.center = p;
 }
 
 spot::~spot()

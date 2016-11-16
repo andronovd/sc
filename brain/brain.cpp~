@@ -24,26 +24,23 @@ int thresh = 70;
 int color_thresh = 600;
 int kernel_size = 3;
 
-void circScore( char*, vector<double>* );
+void circScore( char*, vector<spot*>* );
 
 /** @function main */
 int main( int argc, char** argv )
 {
   /// Load an image
   char* filename = argv[1];
-  
-  spot d = spot();
-  double f = d.center;
-	/*
-	vector< double > cScores;
-	circScore( filename, &cScores );
-	printf( "%d\n", cScores.size() );
-	*/
+
+	vector< spot* > spots;
+	circScore( filename, &spots );
+	printf( "%d\n", spots.size() );
+	
   return 0;
 }
 
 
-void circScore( char* filename, vector<double>* ans )
+void circScore( char* filename, vector<spot*>* spots)
 {
 	src = imread( filename );
 
@@ -109,8 +106,6 @@ void circScore( char* filename, vector<double>* ans )
 	//now that we know the number of circles found, we can allocate the output array
 	//the first element will be the number of circles found, so we can use 
 	//that info later
-	int numCirc = circles.size();
-	(*ans).push_back( numCirc );
 	
 	
   //creating a copy to put the cirlces that the Hough trans find 
@@ -123,12 +118,13 @@ void circScore( char* filename, vector<double>* ans )
   double xbar = 0;
 	double ybar = 0;
 	double dbar = 0;
+	int numCirc = circles.size();
   for( size_t i = 0; i < numCirc; i++ )
   {
   	//circle centers & radius
-		x = cvRound(circles[i][0]);
-		y = cvRound(circles[i][1]);
+  	Point center( cvRound(circles[i][0]), cvRound(circles[i][1]) );
 		r = cvRound(circles[i][2]) + rad_pad;
+		spot* dot = new spot( center );
 		if( PRINT )
 		{
 			printf( "(%d, %d), r = %d\n", x, y, r );
@@ -150,6 +146,7 @@ void circScore( char* filename, vector<double>* ans )
 				{
 					//printf( "%d\n", i.val[0] );
 					//get the distance of the point from the center
+					dot->edge.push_back( Point(row, col ) );
 					count++;
 					dbar += sqrt( pow( col - x, 2 ) + pow( row - y, 2 ) );
 					xbar += col;
@@ -157,6 +154,7 @@ void circScore( char* filename, vector<double>* ans )
 				}
 			}
 		}
+		spots->push_back( dot );
 		xbar /= count;
 		ybar /= count;
 		dbar /= count;
@@ -190,7 +188,6 @@ void circScore( char* filename, vector<double>* ans )
 		{
 			printf( "e: %f\n", e );
 		}
-		(*ans).push_back( e );
 		
 		Point center(x, y);	
 		//draw the circles on h_out

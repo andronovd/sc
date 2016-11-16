@@ -50,44 +50,44 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/qed/Documents/sc/brain
+CMAKE_SOURCE_DIR = /home/qed/docs/sc/brain
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/qed/Documents/sc/brain
+CMAKE_BINARY_DIR = /home/qed/docs/sc/brain
 
 #=============================================================================
-# Target rules for target CMakeFiles/circScoreVec.dir
+# Target rules for target CMakeFiles/brain.dir
 
 # All Build rule for target.
-CMakeFiles/circScoreVec.dir/all:
-	$(MAKE) -f CMakeFiles/circScoreVec.dir/build.make CMakeFiles/circScoreVec.dir/depend
-	$(MAKE) -f CMakeFiles/circScoreVec.dir/build.make CMakeFiles/circScoreVec.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/qed/Documents/sc/brain/CMakeFiles  1 2
-	@echo "Built target circScoreVec"
-.PHONY : CMakeFiles/circScoreVec.dir/all
+CMakeFiles/brain.dir/all:
+	$(MAKE) -f CMakeFiles/brain.dir/build.make CMakeFiles/brain.dir/depend
+	$(MAKE) -f CMakeFiles/brain.dir/build.make CMakeFiles/brain.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/qed/docs/sc/brain/CMakeFiles  1 2
+	@echo "Built target brain"
+.PHONY : CMakeFiles/brain.dir/all
 
 # Include target in all.
-all: CMakeFiles/circScoreVec.dir/all
+all: CMakeFiles/brain.dir/all
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/circScoreVec.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/qed/Documents/sc/brain/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/circScoreVec.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/qed/Documents/sc/brain/CMakeFiles 0
-.PHONY : CMakeFiles/circScoreVec.dir/rule
+CMakeFiles/brain.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/qed/docs/sc/brain/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/brain.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/qed/docs/sc/brain/CMakeFiles 0
+.PHONY : CMakeFiles/brain.dir/rule
 
 # Convenience name for target.
-circScoreVec: CMakeFiles/circScoreVec.dir/rule
-.PHONY : circScoreVec
+brain: CMakeFiles/brain.dir/rule
+.PHONY : brain
 
 # clean rule for target.
-CMakeFiles/circScoreVec.dir/clean:
-	$(MAKE) -f CMakeFiles/circScoreVec.dir/build.make CMakeFiles/circScoreVec.dir/clean
-.PHONY : CMakeFiles/circScoreVec.dir/clean
+CMakeFiles/brain.dir/clean:
+	$(MAKE) -f CMakeFiles/brain.dir/build.make CMakeFiles/brain.dir/clean
+.PHONY : CMakeFiles/brain.dir/clean
 
 # clean rule for target.
-clean: CMakeFiles/circScoreVec.dir/clean
+clean: CMakeFiles/brain.dir/clean
 .PHONY : clean
 
 #=============================================================================

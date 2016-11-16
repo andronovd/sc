@@ -42,10 +42,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/qed/Documents/sc/brain
+CMAKE_SOURCE_DIR = /home/qed/docs/sc/brain
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/qed/Documents/sc/brain
+CMAKE_BINARY_DIR = /home/qed/docs/sc/brain
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -72,9 +72,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/qed/Documents/sc/brain/CMakeFiles /home/qed/Documents/sc/brain/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/qed/docs/sc/brain/CMakeFiles /home/qed/docs/sc/brain/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/qed/Documents/sc/brain/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/qed/docs/sc/brain/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -102,46 +102,46 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named circScoreVec
+# Target rules for targets named brain
 
 # Build rule for target.
-circScoreVec: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 circScoreVec
-.PHONY : circScoreVec
+brain: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 brain
+.PHONY : brain
 
 # fast build rule for target.
-circScoreVec/fast:
-	$(MAKE) -f CMakeFiles/circScoreVec.dir/build.make CMakeFiles/circScoreVec.dir/build
-.PHONY : circScoreVec/fast
+brain/fast:
+	$(MAKE) -f CMakeFiles/brain.dir/build.make CMakeFiles/brain.dir/build
+.PHONY : brain/fast
 
 # target to build an object file
-circScoreVec.o:
-	$(MAKE) -f CMakeFiles/circScoreVec.dir/build.make CMakeFiles/circScoreVec.dir/circScoreVec.o
-.PHONY : circScoreVec.o
+brain.o:
+	$(MAKE) -f CMakeFiles/brain.dir/build.make CMakeFiles/brain.dir/brain.o
+.PHONY : brain.o
 
 # target to preprocess a source file
-circScoreVec.i:
-	$(MAKE) -f CMakeFiles/circScoreVec.dir/build.make CMakeFiles/circScoreVec.dir/circScoreVec.i
-.PHONY : circScoreVec.i
+brain.i:
+	$(MAKE) -f CMakeFiles/brain.dir/build.make CMakeFiles/brain.dir/brain.i
+.PHONY : brain.i
 
 # target to generate assembly for a file
-circScoreVec.s:
-	$(MAKE) -f CMakeFiles/circScoreVec.dir/build.make CMakeFiles/circScoreVec.dir/circScoreVec.s
-.PHONY : circScoreVec.s
+brain.s:
+	$(MAKE) -f CMakeFiles/brain.dir/build.make CMakeFiles/brain.dir/brain.s
+.PHONY : brain.s
 
 # target to build an object file
 spot.o:
-	$(MAKE) -f CMakeFiles/circScoreVec.dir/build.make CMakeFiles/circScoreVec.dir/spot.o
+	$(MAKE) -f CMakeFiles/brain.dir/build.make CMakeFiles/brain.dir/spot.o
 .PHONY : spot.o
 
 # target to preprocess a source file
 spot.i:
-	$(MAKE) -f CMakeFiles/circScoreVec.dir/build.make CMakeFiles/circScoreVec.dir/spot.i
+	$(MAKE) -f CMakeFiles/brain.dir/build.make CMakeFiles/brain.dir/spot.i
 .PHONY : spot.i
 
 # target to generate assembly for a file
 spot.s:
-	$(MAKE) -f CMakeFiles/circScoreVec.dir/build.make CMakeFiles/circScoreVec.dir/spot.s
+	$(MAKE) -f CMakeFiles/brain.dir/build.make CMakeFiles/brain.dir/spot.s
 .PHONY : spot.s
 
 # Help Target
@@ -150,12 +150,12 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... circScoreVec"
+	@echo "... brain"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... circScoreVec.o"
-	@echo "... circScoreVec.i"
-	@echo "... circScoreVec.s"
+	@echo "... brain.o"
+	@echo "... brain.i"
+	@echo "... brain.s"
 	@echo "... spot.o"
 	@echo "... spot.i"
 	@echo "... spot.s"

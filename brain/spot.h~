@@ -20,7 +20,7 @@ class spot
 		
 	//--function members	
 		spot();
-		spot( Point );
+		spot( Point, int );
 		~spot();
 };
 
