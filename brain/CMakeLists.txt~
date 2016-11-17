@@ -1,6 +1,0 @@
-cmake_minimum_required(VERSION 2.0)
-project( circScoreVec )
-find_package( OpenCV REQUIRED )
-set( HEADER_FILES	spot.h )
-add_executable( circScoreVec circScoreVec.cpp spot.cpp ${HEADER_FILES} )
-target_link_libraries( circScoreVec ${OpenCV_LIBS} )

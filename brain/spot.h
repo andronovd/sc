@@ -9,7 +9,15 @@ class spot
 {
 	public:
 	//--data members
-		Point center;
+		static int numCirc;
+		
+		int c_x;
+		int c_y;
+		
+		double xbar;
+		double ybar;
+		
+		double avg_r;
 		vector<Point> edge;
 		
 		double circScore;
@@ -20,7 +28,7 @@ class spot
 		
 	//--function members	
 		spot();
-		spot( Point );
+		spot( int, int );
 		~spot();
 };
 

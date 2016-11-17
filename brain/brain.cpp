@@ -24,23 +24,29 @@ int thresh = 70;
 int color_thresh = 600;
 int kernel_size = 3;
 
-void circScore( char*, vector<spot*>* );
+void findSpots( char*, vector<spot*>* );
+void circScore( vector<spot*>* );
 
 /** @function main */
 int main( int argc, char** argv )
 {
   /// Load an image
   char* filename = argv[1];
-
 	vector< spot* > spots;
-	circScore( filename, &spots );
+	findSpots( filename, &spots );
+	circScore( &spots );
 	printf( "%d\n", spots.size() );
+	
+	for( int i = 0; i < spots.size(); i++ )
+	{
+		printf( "%f\n", spots[i]->circScore);
+	}
 	
   return 0;
 }
 
 
-void circScore( char* filename, vector<spot*>* spots)
+void findSpots( char* filename, vector<spot*>* spots)
 {
 	src = imread( filename );
 
@@ -122,9 +128,10 @@ void circScore( char* filename, vector<spot*>* spots)
   for( size_t i = 0; i < numCirc; i++ )
   {
   	//circle centers & radius
-  	Point center( cvRound(circles[i][0]), cvRound(circles[i][1]) );
+  	x = cvRound( circles[ i ][ 0 ] );
+  	y = cvRound( circles[ i ][ 1 ] );
 		r = cvRound(circles[i][2]) + rad_pad;
-		spot* dot = new spot( center );
+		spot* dot = new spot( x, y );
 		if( PRINT )
 		{
 			printf( "(%d, %d), r = %d\n", x, y, r );
@@ -144,9 +151,9 @@ void circScore( char* filename, vector<spot*>* spots)
 				//std::cout <<"ival " << i.val[0]<< std::endl;
 				if( i.val[0] == 255 )
 				{
-					//printf( "%d\n", i.val[0] );
 					//get the distance of the point from the center
-					dot->edge.push_back( Point(row, col ) );
+//					Point p( row, col );
+					dot->edge.push_back( Point( col, row ) );
 					count++;
 					dbar += sqrt( pow( col - x, 2 ) + pow( row - y, 2 ) );
 					xbar += col;
@@ -154,58 +161,75 @@ void circScore( char* filename, vector<spot*>* spots)
 				}
 			}
 		}
+		
+		dot->xbar = xbar/count;
+		dot->ybar = ybar/count;
+		dot->avg_r = dbar/count;
+		
 		spots->push_back( dot );
-		xbar /= count;
-		ybar /= count;
-		dbar /= count;
 		
 		if( PRINT )
 		{
-			printf( "cbar: (%f, %f), dbar = %f\n", xbar, ybar, dbar);
+			printf( "cbar: (%f, %f), dbar = %f\n", xbar/count, ybar/count, dbar/count);
 			printf( "%d non-black pixels found\n", count );
 		}
+	}
+	return;
+}
+
+void circScore( vector<spot*>* spots)
+{
 		//calculate circle score
 		//the Hough centers are pretty close to xbar and ybar
 		//but i decided to use them for extra accuracy
 		//though the improvement is marginal and can be taken out later
-		double e = 1;
-		for( int row = y - r; row < (y + r); row++ )
-		{
-			for( int col = x - r; col < (x + r); col++ )
-			{
-
-				Scalar i = edges.at<unsigned char>(row, col );
-				if( i.val[0] == 255 )
-				{
-					//for each point, find it ratio to the average distace
-					//the score is the product for all points
-					e *= sqrt( pow( col - xbar, 2 ) + pow( row - ybar, 2 ) );
-					e /=dbar;
-				}
-			}
-		} 
-		if( PRINT )
-		{
-			printf( "e: %f\n", e );
-		}
-		//draw the circles on h_out
-		circle( h_out, center, 3, Scalar(0,255,0), -1, 8, 0 );
-		circle( h_out, center, r, Scalar(255, 0 , 0), 3, 8, 0 );
+		double e;
+		int numCirc = spots->at( 0 )->numCirc;
 		
-		//draw the circle score on the output image
-		//convert e to a string
-		char buff[50];
-		int n = sprintf( buff, "%f", e );
-		std::string s( buff );
-		putText( h_out, s, center, FONT_HERSHEY_SIMPLEX, 0.5, Scalar( 0, 0, 255 ), 1, 8 );
-		//rectangle( h_out, start, end, Scalar( 0, 0, 255), 3, 8, 0 );
-   }
-
+		int numPnt;
+		double xbar;
+		double ybar;
+		double dbar;
+		for( int i = 0; i < numCirc; i++ )
+		{
+			numPnt = spots->at(i)->edge.size();
+			
+			xbar = spots->at(i)->xbar;
+			ybar = spots->at(i)->ybar;
+			dbar = spots->at(i)->avg_r;
+			
+			e = 1.0;
+			for( int j = 0; j < numPnt; j++ )
+			{
+				e *= sqrt( pow( spots->at(i)->edge[j].x - xbar, 2 ) + pow( spots->at(i)->edge[j].y- ybar, 2 ) );
+				e /=dbar;
+			}
+			spots->at(i)->circScore = e;
+			if( PRINT )
+			{
+				printf( "spot No.%d, e: %f\n", i, e );
+			}
+			/*
+			//draw the circles on h_out
+			circle( h_out, center, 3, Scalar(0,255,0), -1, 8, 0 );
+			circle( h_out, center, r, Scalar(255, 0 , 0), 3, 8, 0 );
+		
+			//draw the circle score on the output image
+			//convert e to a string
+			char buff[50];
+			int n = sprintf( buff, "%f", e );
+			std::string s( buff );
+			putText( h_out, s, center, FONT_HERSHEY_SIMPLEX, 0.5, Scalar( 0, 0, 255 ), 1, 8 );
+			//rectangle( h_out, start, end, Scalar( 0, 0, 255), 3, 8, 0 );
+			*/
+		}
+	/*
   /// Show your results
   namedWindow( "Final Result", CV_WINDOW_AUTOSIZE );
   imshow( "Final Result", h_out );
   imwrite( "circScores.jpg", h_out );
 
   waitKey(0);
+  */
   return;
 }
