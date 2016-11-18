@@ -26,6 +26,8 @@ int kernel_size = 3;
 
 void findSpots( char*, vector<spot*>* );
 void circScore( vector<spot*>* );
+void showCircScores( char*, vector< spot* >* );
+void analyze_height( vector< spot* >* );
 
 /** @function main */
 int main( int argc, char** argv )
@@ -36,11 +38,13 @@ int main( int argc, char** argv )
 	findSpots( filename, &spots );
 	circScore( &spots );
 	printf( "%d\n", spots.size() );
-	
+	/*
 	for( int i = 0; i < spots.size(); i++ )
 	{
 		printf( "%f\n", spots[i]->circScore);
 	}
+	*/
+	showCircScores( filename, &spots );
 	
   return 0;
 }
@@ -209,27 +213,102 @@ void circScore( vector<spot*>* spots)
 			{
 				printf( "spot No.%d, e: %f\n", i, e );
 			}
-			/*
-			//draw the circles on h_out
-			circle( h_out, center, 3, Scalar(0,255,0), -1, 8, 0 );
-			circle( h_out, center, r, Scalar(255, 0 , 0), 3, 8, 0 );
-		
-			//draw the circle score on the output image
-			//convert e to a string
-			char buff[50];
-			int n = sprintf( buff, "%f", e );
-			std::string s( buff );
-			putText( h_out, s, center, FONT_HERSHEY_SIMPLEX, 0.5, Scalar( 0, 0, 255 ), 1, 8 );
-			//rectangle( h_out, start, end, Scalar( 0, 0, 255), 3, 8, 0 );
-			*/
+			
 		}
-	/*
+	
+  return;
+}
+
+void showCircScores( char* filename, vector<spot*>* spots )
+{
+	src = imread( filename );
+
+  if( !src.data )
+  { 
+  	printf( "couldn't open file\n");
+  	return;
+  }
+  
+  //I'm scaleing down the image because the orignal was quite
+  //large and didn't fit on my screen
+  for( int i = 0; i < 2; i++ )
+	{
+		pyrDown( src, src, Size( src.cols/SCALE, src.rows/SCALE ) );
+	}
+	
+	if(SHOW)
+	{
+  	imshow( "Original image", src );
+  }
+  
+  
+  //convert to grayscale
+  cvtColor( src, src_gray, CV_BGR2GRAY );
+  if(SHOW)
+  {
+  	imshow( "Grayscale Image", src_gray );
+  }
+  
+  
+  
+  //threshold & blur the image
+  threshold( src_gray, src_gray, 41, 255, 0 );
+  if(SHOW)
+  {
+  	imshow( "Thresholded Image", src_gray );
+  }
+  
+  GaussianBlur( src_gray, src_gray, Size( SIZE, SIZE), 0, 0 );
+  if(SHOW)
+  {
+  	imshow( "Blurred Image", src_gray );
+  }
+  
+
+  /// Canny detector
+  Canny( src_gray, edges, 100, 300, kernel_size );
+  if(SHOW)
+  {
+  	imshow( "Canny Results", edges );
+  }
+  
+  
+  //convert edges back to a color image to see the text and circles
+  cvtColor( edges, edges, CV_GRAY2BGR );
+  int numCirc = spots->at( 0 )->numCirc;
+  double e, x, y;
+  int r;
+  for( int i = 0 ; i < numCirc; i++ )
+  {
+  	e = spots->at( i )->circScore;
+  	r = spots->at( i )->avg_r + rad_pad;
+  	x = spots->at( i )->c_x;
+  	y = spots->at( i )->c_y;
+  	Point center( x, y );
+  	
+  	//draw the circles on h_out
+		circle( edges, center, 3, Scalar(0,255,0), -1, 8, 0 );
+		circle( edges, center, r, Scalar(255, 0 , 0), 3, 8, 0 );
+	
+		//draw the circle score on the output image
+		//convert e to a string
+		char buff[50];
+		int n = sprintf( buff, "%f", e );
+		std::string s( buff );
+		putText( edges, s, center, FONT_HERSHEY_SIMPLEX, 0.5, Scalar( 0, 0, 255 ), 1, 8 );
+		//rectangle( h_out, start, end, Scalar( 0, 0, 255), 3, 8, 0 );			
+	}
   /// Show your results
   namedWindow( "Final Result", CV_WINDOW_AUTOSIZE );
-  imshow( "Final Result", h_out );
-  imwrite( "circScores.jpg", h_out );
+  imshow( "Final Result", edges );
+  imwrite( "circScores.jpg", edges );
 
   waitKey(0);
-  */
   return;
+}
+
+void analyze_height( vector< spot* >* spots )
+{
+
+	return;
 }

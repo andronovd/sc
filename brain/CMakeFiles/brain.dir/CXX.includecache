@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/qed/Documents/sc/brain/brain.cpp
+/home/qed/docs/sc/brain/brain.cpp
 opencv2/imgproc/imgproc.hpp
 -
 opencv2/highgui/highgui.hpp
@@ -24,9 +24,9 @@ iostream
 string
 -
 spot.h
-/home/qed/Documents/sc/brain/spot.h
+/home/qed/docs/sc/brain/spot.h
 
-/home/qed/Documents/sc/brain/spot.h
+/home/qed/docs/sc/brain/spot.h
 opencv2/imgproc/imgproc.hpp
-/home/qed/Documents/sc/brain/opencv2/imgproc/imgproc.hpp
+/home/qed/docs/sc/brain/opencv2/imgproc/imgproc.hpp
 

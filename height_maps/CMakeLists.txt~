@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 2.0)
+project( heights )
+find_package( OpenCV REQUIRED )
+#set( HEADER_FILES	spot.h )
+add_executable( heights heights.cpp spot.cpp ${HEADER_FILES} )
+target_link_libraries( heights ${OpenCV_LIBS} )

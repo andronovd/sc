@@ -50,10 +50,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/qed/Documents/sc/brain
+CMAKE_SOURCE_DIR = /home/qed/docs/sc/brain
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/qed/Documents/sc/brain
+CMAKE_BINARY_DIR = /home/qed/docs/sc/brain
 
 #=============================================================================
 # Target rules for target CMakeFiles/brain.dir
@@ -62,7 +62,7 @@ CMAKE_BINARY_DIR = /home/qed/Documents/sc/brain
 CMakeFiles/brain.dir/all:
 	$(MAKE) -f CMakeFiles/brain.dir/build.make CMakeFiles/brain.dir/depend
 	$(MAKE) -f CMakeFiles/brain.dir/build.make CMakeFiles/brain.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/qed/Documents/sc/brain/CMakeFiles  1 2
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/qed/docs/sc/brain/CMakeFiles  1 2
 	@echo "Built target brain"
 .PHONY : CMakeFiles/brain.dir/all
 
@@ -72,9 +72,9 @@ all: CMakeFiles/brain.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/brain.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/qed/Documents/sc/brain/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/qed/docs/sc/brain/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/brain.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/qed/Documents/sc/brain/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/qed/docs/sc/brain/CMakeFiles 0
 .PHONY : CMakeFiles/brain.dir/rule
 
 # Convenience name for target.

@@ -4,8 +4,8 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/qed/Documents/sc/brain/brain.cpp" "/home/qed/Documents/sc/brain/CMakeFiles/brain.dir/brain.o"
-  "/home/qed/Documents/sc/brain/spot.cpp" "/home/qed/Documents/sc/brain/CMakeFiles/brain.dir/spot.o"
+  "/home/qed/docs/sc/brain/brain.cpp" "/home/qed/docs/sc/brain/CMakeFiles/brain.dir/brain.o"
+  "/home/qed/docs/sc/brain/spot.cpp" "/home/qed/docs/sc/brain/CMakeFiles/brain.dir/spot.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 

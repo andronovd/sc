@@ -38,10 +38,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/qed/Documents/sc/brain
+CMAKE_SOURCE_DIR = /home/qed/docs/sc/brain
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/qed/Documents/sc/brain
+CMAKE_BINARY_DIR = /home/qed/docs/sc/brain
 
 # Include any dependencies generated for this target.
 include CMakeFiles/brain.dir/depend.make
@@ -54,17 +54,17 @@ include CMakeFiles/brain.dir/flags.make
 
 CMakeFiles/brain.dir/brain.o: CMakeFiles/brain.dir/flags.make
 CMakeFiles/brain.dir/brain.o: brain.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/qed/Documents/sc/brain/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/qed/docs/sc/brain/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/brain.dir/brain.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/brain.dir/brain.o -c /home/qed/Documents/sc/brain/brain.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/brain.dir/brain.o -c /home/qed/docs/sc/brain/brain.cpp
 
 CMakeFiles/brain.dir/brain.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/brain.dir/brain.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/qed/Documents/sc/brain/brain.cpp > CMakeFiles/brain.dir/brain.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/qed/docs/sc/brain/brain.cpp > CMakeFiles/brain.dir/brain.i
 
 CMakeFiles/brain.dir/brain.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/brain.dir/brain.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/qed/Documents/sc/brain/brain.cpp -o CMakeFiles/brain.dir/brain.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/qed/docs/sc/brain/brain.cpp -o CMakeFiles/brain.dir/brain.s
 
 CMakeFiles/brain.dir/brain.o.requires:
 .PHONY : CMakeFiles/brain.dir/brain.o.requires
@@ -77,17 +77,17 @@ CMakeFiles/brain.dir/brain.o.provides.build: CMakeFiles/brain.dir/brain.o
 
 CMakeFiles/brain.dir/spot.o: CMakeFiles/brain.dir/flags.make
 CMakeFiles/brain.dir/spot.o: spot.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/qed/Documents/sc/brain/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/qed/docs/sc/brain/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/brain.dir/spot.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/brain.dir/spot.o -c /home/qed/Documents/sc/brain/spot.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/brain.dir/spot.o -c /home/qed/docs/sc/brain/spot.cpp
 
 CMakeFiles/brain.dir/spot.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/brain.dir/spot.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/qed/Documents/sc/brain/spot.cpp > CMakeFiles/brain.dir/spot.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/qed/docs/sc/brain/spot.cpp > CMakeFiles/brain.dir/spot.i
 
 CMakeFiles/brain.dir/spot.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/brain.dir/spot.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/qed/Documents/sc/brain/spot.cpp -o CMakeFiles/brain.dir/spot.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/qed/docs/sc/brain/spot.cpp -o CMakeFiles/brain.dir/spot.s
 
 CMakeFiles/brain.dir/spot.o.requires:
 .PHONY : CMakeFiles/brain.dir/spot.o.requires
@@ -142,6 +142,6 @@ CMakeFiles/brain.dir/clean:
 .PHONY : CMakeFiles/brain.dir/clean
 
 CMakeFiles/brain.dir/depend:
-	cd /home/qed/Documents/sc/brain && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/qed/Documents/sc/brain /home/qed/Documents/sc/brain /home/qed/Documents/sc/brain /home/qed/Documents/sc/brain /home/qed/Documents/sc/brain/CMakeFiles/brain.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/qed/docs/sc/brain && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/qed/docs/sc/brain /home/qed/docs/sc/brain /home/qed/docs/sc/brain /home/qed/docs/sc/brain /home/qed/docs/sc/brain/CMakeFiles/brain.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/brain.dir/depend
 
