@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.0)
-project( smooth )
+project( circScoreVec )
 find_package( OpenCV REQUIRED )
-add_executable( smooth smooth.cpp ${HEADER_FILES} )
-target_link_libraries( smooth ${OpenCV_LIBS} )
+add_executable( circScoreVec circScoreVec.cpp ${HEADER_FILES} )
+target_link_libraries( circScoreVec ${OpenCV_LIBS} )

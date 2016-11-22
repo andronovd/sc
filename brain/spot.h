@@ -22,7 +22,7 @@ class spot
 		
 		double circScore;
 		double avg_height;
-		double surfScore;
+		double std_height;
 		double volume;
 		
 		
@@ -30,6 +30,8 @@ class spot
 		spot();
 		spot( int, int );
 		~spot();
+		
+		void info(); //print info about the spot
 };
 
 #endif

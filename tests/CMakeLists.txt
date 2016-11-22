@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.0)
-project( circScoreVec )
+project( cvThresh )
 find_package( OpenCV REQUIRED )
-add_executable( circScoreVec circScoreVec.cpp ${HEADER_FILES} )
-target_link_libraries( circScoreVec ${OpenCV_LIBS} )
+add_executable( cvThresh cvThresh.cpp ${HEADER_FILES} )
+target_link_libraries( cvThresh ${OpenCV_LIBS} )

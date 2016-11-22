@@ -27,7 +27,7 @@ int kernel_size = 3;
 void findSpots( char*, vector<spot*>* );
 void circScore( vector<spot*>* );
 void showCircScores( char*, vector< spot* >* );
-void analyze_height( vector< spot* >* );
+void analyze_height( char*, vector< spot* >* );
 
 /** @function main */
 int main( int argc, char** argv )
@@ -35,16 +35,18 @@ int main( int argc, char** argv )
   /// Load an image
   char* filename = argv[1];
 	vector< spot* > spots;
+	
 	findSpots( filename, &spots );
+	analyze_height( filename, &spots );
+	/*
 	circScore( &spots );
 	printf( "%d\n", spots.size() );
-	/*
 	for( int i = 0; i < spots.size(); i++ )
 	{
 		printf( "%f\n", spots[i]->circScore);
 	}
 	*/
-	showCircScores( filename, &spots );
+	//showCircScores( filename, &spots );
 	
   return 0;
 }
@@ -299,16 +301,85 @@ void showCircScores( char* filename, vector<spot*>* spots )
 		//rectangle( h_out, start, end, Scalar( 0, 0, 255), 3, 8, 0 );			
 	}
   /// Show your results
-  namedWindow( "Final Result", CV_WINDOW_AUTOSIZE );
-  imshow( "Final Result", edges );
-  imwrite( "circScores.jpg", edges );
+  if( SHOW )
+  {
+  	namedWindow( "Final Result", CV_WINDOW_AUTOSIZE );
+  	imshow( "Final Result", edges );
+  	imwrite( "circScores.jpg", edges );
 
-  waitKey(0);
+  	waitKey(0);
+  }
   return;
 }
 
-void analyze_height( vector< spot* >* spots )
+void analyze_height( char* filename, vector< spot* >* spots )
 {
-
+	double maxHeight = 100.0;
+	src = imread( filename );
+	Mat src_gray, src_thresh; //greyscale
+	//down size the image by 4x
+	for( int i = 0; i < 2; i++ )
+	{
+		pyrDown( src, src, Size( src.cols/2, src.rows/2 ) );
+	}
+	//convert to grey scale and put a threshold over it
+	cvtColor( src, src_gray, CV_BGR2GRAY );
+  threshold( src_gray, src_thresh, 41, 255, 0 );
+  if(	SHOW )
+  {
+  	imshow("thresh & grey", src_gray );
+  	
+  }
+  
+  //now iterate through all the circles and use
+  //the bounding box method to look for white pixels and 
+  //measure the metrics regarding the height. 
+  int numCirc = spots->at( 0 )->numCirc;
+  int row, col, x, y, r, count;
+  double avgH, vol, stdH, height;
+  for( int i = 0; i < numCirc; i++ )
+  {
+  	avgH = 0.0;
+  	vol = 0.0;
+  	stdH = 0.0;
+  	height = 0.0;
+  	count = 0;
+  	
+  	x = spots->at( i )->c_x;
+  	y = spots->at( i )->c_y;
+  	r = (int)spots->at( i )->avg_r;
+  	
+  	for(int row = y - r ; row < (y + r); row++ )
+  	{
+  		for(int col = x - r ; col < (x + r); col++ )
+  		{
+  			Scalar i = src_thresh.at<unsigned char>( row, col );
+  			//printf("%d\n", i.val[0] );
+  			if( i.val[0] == 255 )
+  			{
+	  			Scalar j = src_gray.at<unsigned char>( row, col );
+  				count++;
+  				//calculate height	
+  				height = maxHeight * j.val[0] / 255.0;
+					avgH += height;
+					stdH += ( pow( height, 2 ) );
+				}
+  		}
+  	}
+  	if( PRINT )
+  	{
+  		printf( "Found %d white pixels", count );
+  	}
+  	spots->at( i )->volume = avgH;
+  	avgH /= count;
+  	stdH = (stdH/count) - ( pow( avgH, 2 ) ) ;
+  	spots->at( i )->avg_height = avgH;
+  	spots->at( i )->std_height = stdH; 	
+  	
+  	//show the results;
+  	spots->at( i )->info();
+  
+  }
+	
 	return;
 }
