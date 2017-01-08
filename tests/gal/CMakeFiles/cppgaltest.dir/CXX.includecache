@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/qed/docs/sc/tests/gal/gp.cpp
+gp.h
+/home/qed/docs/sc/tests/gal/gp.h
+stdio.h
+-
+fstream
+-
+string
+-
+iostream
+-
+
+/home/qed/docs/sc/tests/gal/gp.h
+opencv2/imgproc/imgproc.hpp
+/home/qed/docs/sc/tests/gal/opencv2/imgproc/imgproc.hpp
+string
+-
+stdio.h
+-
+

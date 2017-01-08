@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 2.0)
+project( galParseTest )
+find_package( OpenCV REQUIRED )
+set( HEADER_FILES	gp.h )
+add_executable( cppgaltest cppgaltest.cpp gp.cpp ${HEADER_FILES} )
+target_link_libraries( cppgaltest ${OpenCV_LIBS} )
