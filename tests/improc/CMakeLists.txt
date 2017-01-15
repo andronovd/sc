@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.0)
-project( cvThresh )
+project( cvHough )
 find_package( OpenCV REQUIRED )
-add_executable( cvThresh cvThresh.cpp ${HEADER_FILES} )
-target_link_libraries( cvThresh ${OpenCV_LIBS} )
+add_executable( cvHough cvHough.cpp ${HEADER_FILES} )
+target_link_libraries( cvHough ${OpenCV_LIBS} )

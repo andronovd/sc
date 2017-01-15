@@ -50,44 +50,44 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/qed/docs/sc/tests
+CMAKE_SOURCE_DIR = /home/qed/docs/sc/tests/improc
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/qed/docs/sc/tests
+CMAKE_BINARY_DIR = /home/qed/docs/sc/tests/improc
 
 #=============================================================================
-# Target rules for target CMakeFiles/circScoreVec.dir
+# Target rules for target CMakeFiles/cvHough.dir
 
 # All Build rule for target.
-CMakeFiles/circScoreVec.dir/all:
-	$(MAKE) -f CMakeFiles/circScoreVec.dir/build.make CMakeFiles/circScoreVec.dir/depend
-	$(MAKE) -f CMakeFiles/circScoreVec.dir/build.make CMakeFiles/circScoreVec.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/qed/docs/sc/tests/CMakeFiles  1
-	@echo "Built target circScoreVec"
-.PHONY : CMakeFiles/circScoreVec.dir/all
+CMakeFiles/cvHough.dir/all:
+	$(MAKE) -f CMakeFiles/cvHough.dir/build.make CMakeFiles/cvHough.dir/depend
+	$(MAKE) -f CMakeFiles/cvHough.dir/build.make CMakeFiles/cvHough.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/qed/docs/sc/tests/improc/CMakeFiles  1
+	@echo "Built target cvHough"
+.PHONY : CMakeFiles/cvHough.dir/all
 
 # Include target in all.
-all: CMakeFiles/circScoreVec.dir/all
+all: CMakeFiles/cvHough.dir/all
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/circScoreVec.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/qed/docs/sc/tests/CMakeFiles 1
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/circScoreVec.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/qed/docs/sc/tests/CMakeFiles 0
-.PHONY : CMakeFiles/circScoreVec.dir/rule
+CMakeFiles/cvHough.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/qed/docs/sc/tests/improc/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/cvHough.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/qed/docs/sc/tests/improc/CMakeFiles 0
+.PHONY : CMakeFiles/cvHough.dir/rule
 
 # Convenience name for target.
-circScoreVec: CMakeFiles/circScoreVec.dir/rule
-.PHONY : circScoreVec
+cvHough: CMakeFiles/cvHough.dir/rule
+.PHONY : cvHough
 
 # clean rule for target.
-CMakeFiles/circScoreVec.dir/clean:
-	$(MAKE) -f CMakeFiles/circScoreVec.dir/build.make CMakeFiles/circScoreVec.dir/clean
-.PHONY : CMakeFiles/circScoreVec.dir/clean
+CMakeFiles/cvHough.dir/clean:
+	$(MAKE) -f CMakeFiles/cvHough.dir/build.make CMakeFiles/cvHough.dir/clean
+.PHONY : CMakeFiles/cvHough.dir/clean
 
 # clean rule for target.
-clean: CMakeFiles/circScoreVec.dir/clean
+clean: CMakeFiles/cvHough.dir/clean
 .PHONY : clean
 
 #=============================================================================

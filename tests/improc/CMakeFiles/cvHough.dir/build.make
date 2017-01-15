@@ -38,10 +38,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/qed/docs/sc/tests
+CMAKE_SOURCE_DIR = /home/qed/docs/sc/tests/improc
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/qed/docs/sc/tests
+CMAKE_BINARY_DIR = /home/qed/docs/sc/tests/improc
 
 # Include any dependencies generated for this target.
 include CMakeFiles/cvHough.dir/depend.make
@@ -54,17 +54,17 @@ include CMakeFiles/cvHough.dir/flags.make
 
 CMakeFiles/cvHough.dir/cvHough.o: CMakeFiles/cvHough.dir/flags.make
 CMakeFiles/cvHough.dir/cvHough.o: cvHough.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/qed/docs/sc/tests/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/qed/docs/sc/tests/improc/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/cvHough.dir/cvHough.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/cvHough.dir/cvHough.o -c /home/qed/docs/sc/tests/cvHough.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/cvHough.dir/cvHough.o -c /home/qed/docs/sc/tests/improc/cvHough.cpp
 
 CMakeFiles/cvHough.dir/cvHough.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cvHough.dir/cvHough.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/qed/docs/sc/tests/cvHough.cpp > CMakeFiles/cvHough.dir/cvHough.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/qed/docs/sc/tests/improc/cvHough.cpp > CMakeFiles/cvHough.dir/cvHough.i
 
 CMakeFiles/cvHough.dir/cvHough.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cvHough.dir/cvHough.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/qed/docs/sc/tests/cvHough.cpp -o CMakeFiles/cvHough.dir/cvHough.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/qed/docs/sc/tests/improc/cvHough.cpp -o CMakeFiles/cvHough.dir/cvHough.s
 
 CMakeFiles/cvHough.dir/cvHough.o.requires:
 .PHONY : CMakeFiles/cvHough.dir/cvHough.o.requires
@@ -116,6 +116,6 @@ CMakeFiles/cvHough.dir/clean:
 .PHONY : CMakeFiles/cvHough.dir/clean
 
 CMakeFiles/cvHough.dir/depend:
-	cd /home/qed/docs/sc/tests && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/qed/docs/sc/tests /home/qed/docs/sc/tests /home/qed/docs/sc/tests /home/qed/docs/sc/tests /home/qed/docs/sc/tests/CMakeFiles/cvHough.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/qed/docs/sc/tests/improc && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/qed/docs/sc/tests/improc /home/qed/docs/sc/tests/improc /home/qed/docs/sc/tests/improc /home/qed/docs/sc/tests/improc /home/qed/docs/sc/tests/improc/CMakeFiles/cvHough.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/cvHough.dir/depend
 

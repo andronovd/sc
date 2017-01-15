@@ -17,6 +17,8 @@ string
 -
 iostream
 -
+map
+-
 
 /home/qed/docs/sc/tests/gal/gp.h
 opencv2/imgproc/imgproc.hpp

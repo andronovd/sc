@@ -8,9 +8,5 @@ int main()
 {
 	char* fname = "test.gal";
 	
-	gp* galP = new gp( fname );
-	galP->analyze();
-	delete galP;
-	
 	return 0;
 }	 

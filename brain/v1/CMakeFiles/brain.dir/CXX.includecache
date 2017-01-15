@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/qed/docs/sc/brain/v1/brain.cpp
+opencv2/imgproc/imgproc.hpp
+-
+opencv2/highgui/highgui.hpp
+-
+opencv2/opencv.hpp
+-
+stdlib.h
+-
+stdio.h
+-
+math.h
+-
+iostream
+-
+string
+-
+spot.h
+/home/qed/docs/sc/brain/v1/spot.h
+
+/home/qed/docs/sc/brain/v1/spot.cpp
+spot.h
+/home/qed/docs/sc/brain/v1/spot.h
+stdio.h
+-
+
+/home/qed/docs/sc/brain/v1/spot.h
+opencv2/imgproc/imgproc.hpp
+/home/qed/docs/sc/brain/v1/opencv2/imgproc/imgproc.hpp
+

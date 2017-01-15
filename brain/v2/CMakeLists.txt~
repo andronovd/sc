@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 2.0)
+project( brainVec )
+find_package( OpenCV REQUIRED )
+set( HEADER_FILES	spot.h spotcheck.h gp.h)
+add_executable( brain brain.cpp spot.cpp spotcheck.cpp gp.cpp ${HEADER_FILES} )
+target_link_libraries( brain ${OpenCV_LIBS} )

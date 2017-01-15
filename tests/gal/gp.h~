@@ -54,7 +54,7 @@ cv::vector< std::string > split( std::string, char );
 //removes all instances of the given character from the string
 std::string strip( std::string, char );
 
-void sort( vector< std::string >* );
+void sort( cv::vector< std::string >* );
 
 
 #endif

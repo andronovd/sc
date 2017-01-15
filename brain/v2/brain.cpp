@@ -1,0 +1,48 @@
+#include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/highgui/highgui.hpp>
+#include <opencv2/opencv.hpp>
+#include <stdlib.h>
+#include <stdio.h>
+#include <math.h>
+#include <iostream>
+#include <string>
+#include "spot.h"
+#include "spotcheck.h"
+#include "gp.h"
+
+using namespace cv;
+
+/*
+void findSpots( char*, vector<spot*>* );
+void circScore( vector<spot*>* );
+void showCircScores( char*, vector< spot* >* );
+void analyze_height( char*, vector< spot* >* );
+*/
+
+/** @function main */
+int main( int argc, char** argv )
+{
+  /// Load an image
+  if( argc != 3 )
+  {
+  	printf( "Error: expecting two arguments: <.tiff file path>  <.gal file path>.\n" );
+  	return 1;
+  }
+  
+  char* tiff = argv[1];
+  char* gal = argv[2];
+  
+  //analyze gal
+	gp* galP = new gp( gal );
+	galP->analyze();  
+  
+  //analyze tiff
+	vector< spot* > spots;	
+	printf( "entrycount: %d\n", galP->entryCount );
+	findSpots( tiff, &spots, galP->entryCount );
+		
+	delete galP;
+  return 0;
+}
+
+

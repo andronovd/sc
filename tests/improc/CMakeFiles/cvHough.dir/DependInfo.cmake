@@ -4,7 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/qed/docs/sc/tests/cvHough.cpp" "/home/qed/docs/sc/tests/CMakeFiles/cvHough.dir/cvHough.o"
+  "/home/qed/docs/sc/tests/improc/cvHough.cpp" "/home/qed/docs/sc/tests/improc/CMakeFiles/cvHough.dir/cvHough.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 

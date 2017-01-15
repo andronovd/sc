@@ -42,10 +42,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/qed/docs/sc/tests
+CMAKE_SOURCE_DIR = /home/qed/docs/sc/tests/improc
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/qed/docs/sc/tests
+CMAKE_BINARY_DIR = /home/qed/docs/sc/tests/improc
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -72,9 +72,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/qed/docs/sc/tests/CMakeFiles /home/qed/docs/sc/tests/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/qed/docs/sc/tests/improc/CMakeFiles /home/qed/docs/sc/tests/improc/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/qed/docs/sc/tests/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/qed/docs/sc/tests/improc/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -102,32 +102,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named circScoreVec
+# Target rules for targets named cvHough
 
 # Build rule for target.
-circScoreVec: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 circScoreVec
-.PHONY : circScoreVec
+cvHough: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 cvHough
+.PHONY : cvHough
 
 # fast build rule for target.
-circScoreVec/fast:
-	$(MAKE) -f CMakeFiles/circScoreVec.dir/build.make CMakeFiles/circScoreVec.dir/build
-.PHONY : circScoreVec/fast
+cvHough/fast:
+	$(MAKE) -f CMakeFiles/cvHough.dir/build.make CMakeFiles/cvHough.dir/build
+.PHONY : cvHough/fast
 
 # target to build an object file
-circScoreVec.o:
-	$(MAKE) -f CMakeFiles/circScoreVec.dir/build.make CMakeFiles/circScoreVec.dir/circScoreVec.o
-.PHONY : circScoreVec.o
+cvHough.o:
+	$(MAKE) -f CMakeFiles/cvHough.dir/build.make CMakeFiles/cvHough.dir/cvHough.o
+.PHONY : cvHough.o
 
 # target to preprocess a source file
-circScoreVec.i:
-	$(MAKE) -f CMakeFiles/circScoreVec.dir/build.make CMakeFiles/circScoreVec.dir/circScoreVec.i
-.PHONY : circScoreVec.i
+cvHough.i:
+	$(MAKE) -f CMakeFiles/cvHough.dir/build.make CMakeFiles/cvHough.dir/cvHough.i
+.PHONY : cvHough.i
 
 # target to generate assembly for a file
-circScoreVec.s:
-	$(MAKE) -f CMakeFiles/circScoreVec.dir/build.make CMakeFiles/circScoreVec.dir/circScoreVec.s
-.PHONY : circScoreVec.s
+cvHough.s:
+	$(MAKE) -f CMakeFiles/cvHough.dir/build.make CMakeFiles/cvHough.dir/cvHough.s
+.PHONY : cvHough.s
 
 # Help Target
 help:
@@ -135,12 +135,12 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... circScoreVec"
+	@echo "... cvHough"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... circScoreVec.o"
-	@echo "... circScoreVec.i"
-	@echo "... circScoreVec.s"
+	@echo "... cvHough.o"
+	@echo "... cvHough.i"
+	@echo "... cvHough.s"
 .PHONY : help
 
 

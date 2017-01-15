@@ -3,9 +3,10 @@
 #include <fstream>
 #include <string>
 #include <iostream>
+#include <map>
 
 //---galPoint definitions---//
-galPoint::galPoint( int block, int row, int col, std::string id, std::string name )
+galPoint::galPoint( int block, int col, std::string id, std::string name, int row )
 {
 	this->block = block;
 	this->row = row;
@@ -37,6 +38,7 @@ void gp::analyze()
 	std::string line;
 	cv::vector< std::string > data;
 	
+	//find the line starting with <"Block">
 	while( std::getline( f, line) )
 	{
 		if( line.substr(0, 7)  == "\"Block\"" )
@@ -48,11 +50,6 @@ void gp::analyze()
 	
 	//get the headings
 	data = split( line, ' ' );
-	
-	//sort the data
-	printf( "sorting the data\n" );
-	sort( &data );
-	
 	printf("elements in data:\n" );
 	int j = 0;
 	for( std::vector< std::string >::iterator i = data.begin(); i != data.end(); i++ )
@@ -60,6 +57,58 @@ void gp::analyze()
 		std::cout <<j <<":"<<*i <<std::endl;
 		j++;
 	}
+	
+	//create map
+	std::map< std::string, int > mapping;
+	//fill out the map
+	int size = data.size();
+	for( int i = 0; i < size; i++ )
+	{
+		mapping[ data[i] ] = i;
+	}
+	
+	
+	
+	//sort the headings
+	printf( "sorting the data\n" );
+	sort( &data );
+	
+	printf("elements in sorted data:\n" );
+	j = 0;
+	for( std::vector< std::string >::iterator i = data.begin(); i != data.end(); i++ )
+	{
+		std::cout <<j <<":"<<*i <<std::endl;
+		j++;
+	}
+	
+	
+	//generate the translation array
+	int* trans = new int[ size ];
+	for( int i = 0; i < size; i++ )
+	{
+		std::cout << mapping[ data[i] ] << std::endl;
+		trans[i]  = mapping[ data[i] ];
+	}
+	
+	printf("Translation array: \n" );
+	for( int i = 0 ; i < size; i++ )
+	{
+		printf( "%d ", trans[i] );
+	}
+	printf( "\n" );
+		
+	//now finish reading the file and fill out the entries vector
+	while( std::getline( f, line ) )
+	{
+		data = split( line, ' ' );
+		this->entries.push_back( galPoint( atoi( data[ trans[0] ].c_str() ), atoi( data[ trans[1] ].c_str() ), data[ trans[2] ], data[ trans[3] ], atoi( data[ trans[4] ].c_str() ) ) );
+	}
+	
+	//view entries
+	for( std::vector< galPoint >::iterator i = this->entries.begin(); i != this->entries.end(); i++ )
+	{
+		std::cout <<(*i).block <<(*i).row <<(*i).col <<(*i).id <<(*i).name <<std::endl;
+	}		
 	return;
 }
 
@@ -100,6 +149,8 @@ std::string strip( std::string s, char c )
 	char strchar;
 	
 	int i = 0;
+	//for each character in the string, if its the character
+	//being striped, don't copy it.
 	while( s[i] )
 	{
 		strchar = s[i];
